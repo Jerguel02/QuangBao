@@ -1,0 +1,17 @@
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.csproj.AssemblyReference.cache
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.Form1.resources
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.csproj.GenerateResource.cache
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.GeneratedMSBuildEditorConfig.editorconfig
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.AssemblyInfoInputs.cache
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.AssemblyInfo.cs
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.csproj.CoreCompileInputs.cache
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\bin\Debug\net7.0-windows\ConvertToHex.exe
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\bin\Debug\net7.0-windows\ConvertToHex.deps.json
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\bin\Debug\net7.0-windows\ConvertToHex.runtimeconfig.json
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\bin\Debug\net7.0-windows\ConvertToHex.dll
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\bin\Debug\net7.0-windows\ConvertToHex.pdb
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.dll
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\refint\ConvertToHex.dll
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.pdb
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ConvertToHex.genruntimeconfig.cache
+D:\STM32Project\ConvertToHex\ConvertToHex\ConvertToHex\obj\Debug\net7.0-windows\ref\ConvertToHex.dll
