@@ -40,6 +40,7 @@
             button2 = new Button();
             radioButton64x64 = new RadioButton();
             quitbtn = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -116,9 +117,9 @@
             // Copybtn
             // 
             Copybtn.Cursor = Cursors.Hand;
-            Copybtn.Location = new Point(564, 310);
+            Copybtn.Location = new Point(660, 310);
             Copybtn.Name = "Copybtn";
-            Copybtn.Size = new Size(101, 23);
+            Copybtn.Size = new Size(117, 23);
             Copybtn.TabIndex = 6;
             Copybtn.Text = "Copy";
             Copybtn.UseVisualStyleBackColor = true;
@@ -149,9 +150,9 @@
             // button2
             // 
             button2.Cursor = Cursors.Hand;
-            button2.Location = new Point(459, 311);
+            button2.Location = new Point(539, 311);
             button2.Name = "button2";
-            button2.Size = new Size(99, 22);
+            button2.Size = new Size(115, 22);
             button2.TabIndex = 11;
             button2.Text = "Clear Box";
             button2.UseVisualStyleBackColor = true;
@@ -173,7 +174,7 @@
             // quitbtn
             // 
             quitbtn.Cursor = Cursors.Hand;
-            quitbtn.Location = new Point(671, 311);
+            quitbtn.Location = new Point(660, 354);
             quitbtn.Name = "quitbtn";
             quitbtn.Size = new Size(117, 23);
             quitbtn.TabIndex = 13;
@@ -181,11 +182,23 @@
             quitbtn.UseVisualStyleBackColor = true;
             quitbtn.Click += quitbtn_Click;
             // 
+            // button3
+            // 
+            button3.Cursor = Cursors.Hand;
+            button3.Location = new Point(539, 354);
+            button3.Name = "button3";
+            button3.Size = new Size(117, 23);
+            button3.TabIndex = 14;
+            button3.Text = "Restart";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click_1;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 347);
+            ClientSize = new Size(800, 389);
+            Controls.Add(button3);
             Controls.Add(quitbtn);
             Controls.Add(radioButton64x64);
             Controls.Add(button2);
@@ -223,5 +236,6 @@
         private Button button2;
         private RadioButton radioButton64x64;
         private Button quitbtn;
+        private Button button3;
     }
 }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\git\\QuangBao\\ConvertToHex_SourceCode\\ConvertToHex\\ConvertToHex\\ConvertToHex.csproj",
+      "projectUniqueName": "D:\\STM32Project\\ConvertToHex\\ConvertToHex\\ConvertToHex\\ConvertToHex.csproj",
       "projectName": "ConvertToHex",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\git\\QuangBao\\ConvertToHex_SourceCode\\ConvertToHex\\ConvertToHex\\ConvertToHex.csproj",
+      "projectPath": "D:\\STM32Project\\ConvertToHex\\ConvertToHex\\ConvertToHex\\ConvertToHex.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\git\\QuangBao\\ConvertToHex_SourceCode\\ConvertToHex\\ConvertToHex\\obj\\",
+      "outputPath": "D:\\STM32Project\\ConvertToHex\\ConvertToHex\\ConvertToHex\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
