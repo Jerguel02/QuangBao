@@ -30,72 +30,66 @@ namespace ConvertToHex
             string text = "//[" + this.bitmap.Height.ToString() + "x" + this.bitmap.Width.ToString() + "]  (C) 2023 by PhamNghia_PhanAnhCuong\r\n";
             if (radioButton64x64.Checked || radioButton64x32.Checked)
             {
-                string[][] Rtop = new string[32][];
-                string[][] Gtop = new string[32][];
-                string[][] Btop = new string[32][];
-                string[][] Rbot = new string[32][];
-                string[][] Gbot = new string[32][];
-                string[][] Bbot = new string[32][];
+                int[][] Rtop = new int[32][];
+                int[][] Gtop = new int[32][];
+                int[][] Btop = new int[32][];
+                int[][] Rbot = new int[32][];
+                int[][] Gbot = new int[32][];
+                int[][] Bbot = new int[32][];
                 for (int i = 0; i < 32; i++)
                 {
-                    Rtop[i] = new string[bitmap.Width];
-                    Gtop[i] = new string[bitmap.Width];
-                    Btop[i] = new string[bitmap.Width];
-                    Rbot[i] = new string[bitmap.Width];
-                    Gbot[i] = new string[bitmap.Width];
-                    Bbot[i] = new string[bitmap.Width];
+                    Rtop[i] = new int[bitmap.Width];
+                    Gtop[i] = new int[bitmap.Width];
+                    Btop[i] = new int[bitmap.Width];
+                    Rbot[i] = new int[bitmap.Width];
+                    Gbot[i] = new int[bitmap.Width];
+                    Bbot[i] = new int[bitmap.Width];
                 }
                 for (int i = 0; i < 32; i++)
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
                         Color pixelColor = bitmap.GetPixel(j, i);
-                        Rtop[i][j] = "0x" + pixelColor.R.ToString("X");
-                        Gtop[i][j] = "0x" + pixelColor.G.ToString("X");
-                        Btop[i][j] = "0x" + pixelColor.B.ToString("X");
+                        Rtop[i][j] = pixelColor.R;
+                        Gtop[i][j] = pixelColor.G;
+                        Btop[i][j] = pixelColor.B;
                     }
                 }
-
                 for (int i = 32; i < 64; i++)
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
                         Color pixelColor = bitmap.GetPixel(j, i);
-                        Rbot[i - 32][j] = "0x" + pixelColor.R.ToString("X");
-                        Gbot[i - 32][j] = "0x" + pixelColor.G.ToString("X");
-                        Bbot[i - 32][j] = "0x" + pixelColor.B.ToString("X");
+                        Rbot[i-32][j] = pixelColor.R;
+                        Gbot[i-32][j] = pixelColor.G;
+                        Bbot[i-32][j] = pixelColor.B;
                     }
                 }
-
                 text = text + "//Red \r\n";
                 for (int i = 0; i < 32; i++)
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += Rtop[i][j] + ",";
-
+                        text += "0x0" + round((double)Rtop[i][j]/(double)byte.MaxValue * 31.0).ToString("X") + ",";
                     }
-
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += Rbot[i][j] + ",";
-
+                        text += "0x0" + round((double)Rbot[i][j]/(double)byte.MaxValue * 31.0).ToString("X") + ",";
                     }
                 }
                 text += "\r\n";
                 text += "//Green \r\n";
+
                 for (int i = 0; i < 32; i++)
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += Rtop[i][j] + ",";
-
+                         
+                        text += "0x0" + round((double)Gtop[i][j] / (double)byte.MaxValue * 31.0).ToString("X") + ",";
                     }
-
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += Gbot[i][j] + ",";
-
+                        text += "0x0" + round((double)Gbot[i][j] / (double)byte.MaxValue * 31.0).ToString("X") + ",";
                     }
                 }
                 text += "\r\n";
@@ -104,14 +98,11 @@ namespace ConvertToHex
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += Btop[i][j] + ",";
-
+                        text += "0x0" + round((double)Btop[i][j] / (double)byte.MaxValue * 31.0).ToString("X") + ",";
                     }
-
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += Bbot[i][j] + ",";
-
+                        text += "0x0" + round((double)Bbot[i][j] / (double)byte.MaxValue * 31.0).ToString("X") + ",";
                     }
                 }
                 text += "\r\n";
@@ -119,21 +110,21 @@ namespace ConvertToHex
             }
             else if (radioButton32x128.Checked || radioButton32x64.Checked)
             {
-                string[][] red = new string[32][];
-                string[][] green = new string[32][];
-                string[][] blue = new string[32][];
+                int[][] red = new int[32][];
+                int[][] green = new int[32][];
+                int[][] blue = new int[32][];
                 for (int i = 0; i < 32; i++)
                 {
-                    red[i] = new string[bitmap.Width];
-                    green[i] = new string[bitmap.Width];
-                    blue[i] = new string[bitmap.Width];
+                    red[i] = new int[bitmap.Width];
+                    green[i] = new int[bitmap.Width];
+                    blue[i] = new int[bitmap.Width];
 
                     for (int j = 0; j < bitmap.Width; j++)
                     {
                         Color pixelColor = bitmap.GetPixel(j, i);
-                        red[i][j] = "0x" + pixelColor.R.ToString("X");
-                        green[i][j] = "0x" + pixelColor.G.ToString("X");
-                        blue[i][j] = "0x" + pixelColor.B.ToString("X");
+                        red[i][j] = pixelColor.R;
+                        green[i][j] = pixelColor.G;
+                        blue[i][j] = pixelColor.B;
                     }
                 }
 
@@ -143,7 +134,7 @@ namespace ConvertToHex
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += red[i][j] + ",";
+                        text += "0x0" + round((double)red[i][j] / (double)byte.MaxValue *31.0) + ",";
                     }
 
                 }
@@ -154,7 +145,7 @@ namespace ConvertToHex
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += green[i][j] + ",";
+                        text += "0x0" + round((double)green[i][j]/(double)byte.MaxValue * 31.0) + ",";
                     }
 
                 }
@@ -165,14 +156,11 @@ namespace ConvertToHex
                 {
                     for (int j = 0; j < bitmap.Width; j++)
                     {
-                        text += blue[i][j] + ",";
+                        text += "0x0" + round((double)blue[i][j]/(double)byte.MaxValue * 31.0) + ",";
                     }
-
                 }
                 text += "\r\n";
                 textBox1.Text = text;
-
-
             }
         }
         private void button1_Click_1(object sender, EventArgs e)
@@ -187,8 +175,18 @@ namespace ConvertToHex
             radioButton32x64.Enabled = true;
             radioButton64x32.Enabled = true;
             radioButton64x64.Enabled = true;
-
             Submitbtn.Enabled = true;
+            if (bitmap.Width == 64 && bitmap.Height == 32) radioButton32x64.Checked = true;
+            else if (bitmap.Width == 32 && bitmap.Height == 64) radioButton64x32.Checked = true;
+            else if (bitmap.Width == 64 && bitmap.Height == 64) radioButton64x64.Checked = true;
+            else if (bitmap.Width == 128 && bitmap.Height == 32) radioButton32x128.Checked = true;
+            else
+            {
+                radioButton32x128.Checked = false;
+                radioButton32x64.Checked = false;
+                radioButton64x32.Checked = false;
+                radioButton64x64.Checked = false;
+            }
         }
 
         private void Copybtn_Click(object sender, EventArgs e)
@@ -294,5 +292,11 @@ namespace ConvertToHex
         {
             System.Windows.Forms.Application.Restart();
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

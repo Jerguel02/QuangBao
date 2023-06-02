@@ -33,5 +33,5 @@ led_p5_da1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h
 led_p5_da1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd.h
 led_p5_da1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_usb.h
 led_p5_da1\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pcd_ex.h
-led_p5_da1\main.o: ../../P5_Lib/P5.h
+led_p5_da1\main.o: .\LIB\P5.h
 led_p5_da1\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

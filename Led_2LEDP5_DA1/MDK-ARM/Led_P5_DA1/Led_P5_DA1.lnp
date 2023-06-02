@@ -1,9 +1,9 @@
 --cpu=Cortex-M4.fp.sp
 "led_p5_da1\startup_stm32f407xx.o"
-"led_p5_da1\p5.o"
 "led_p5_da1\main.o"
 "led_p5_da1\stm32f4xx_it.o"
 "led_p5_da1\stm32f4xx_hal_msp.o"
+"led_p5_da1\p5.o"
 "led_p5_da1\stm32f4xx_hal_tim.o"
 "led_p5_da1\stm32f4xx_hal_tim_ex.o"
 "led_p5_da1\stm32f4xx_hal_rcc.o"

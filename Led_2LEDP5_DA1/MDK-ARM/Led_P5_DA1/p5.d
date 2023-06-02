@@ -1,5 +1,5 @@
-led_p5_da1\p5.o: ..\..\P5_Lib\P5.c
-led_p5_da1\p5.o: ..\..\P5_Lib\P5.h
+led_p5_da1\p5.o: LIB\P5.c
+led_p5_da1\p5.o: LIB\P5.h
 led_p5_da1\p5.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h
 led_p5_da1\p5.o: ../Core/Inc/stm32f4xx_hal_conf.h
 led_p5_da1\p5.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h
